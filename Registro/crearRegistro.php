@@ -17,6 +17,19 @@ $link = mysql_connect("localhost","root","");
              echo "<br>Se aregistrado exitosamente  ";
             
 	    }
+		
+		
+		if (!mysql_query("insert into login values(null,'$nombre','$contra')",$link))
+		{
+			 echo "<br>Error en consulta ";
+             }  
+	        else
+	        {
+             echo "<br>Registro adicionado ";
+			 
+			
+		}
+
 
 /*		
   function alerta(){

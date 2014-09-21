@@ -10,7 +10,7 @@ $link = mysql_connect("localhost","root","");
 		$cifrar=md5($contra);
 		
 		
-$cursor=mysql_query("select id_usuario,nombre, contrasena  from usuario where nombre='$nom' and contrasena='$contra' ",$link);
+$cursor=mysql_query("select id_login,usuario, contrasena  from login where usuario='$nom' and contrasena='$contra' ",$link);
 
 while($fila=mysql_fetch_row($cursor)){
      
